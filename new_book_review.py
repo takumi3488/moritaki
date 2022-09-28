@@ -1,3 +1,4 @@
+import subprocess
 import os
 from urllib.parse import quote
 import requests
@@ -39,7 +40,9 @@ updatedDate: ""
 ## 書評
 
 ''')
-        print(f"{fp}にテンプレートファイルを作成")
+        print(f"{fp}にテンプレートファイルを作成\nTyporaで開きますか？(Yn): ", end="")
+        if not input().strip().lower() == "n":
+            subprocess.run(["open", fp, "-a", "Typora"])
 
 
 def main():
