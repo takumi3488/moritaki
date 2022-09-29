@@ -9,6 +9,12 @@ const BookReview: FC<PageProps<Queries.BookReviewPageQuery>> = ({ data }) => {
   return (
     <Layout title={`[書評]『${book.frontmatter!.title}』`} >
       <article className='bg-white w-full p-4 md:p-8'>
+        <img src={book.frontmatter!.thumbnail!} alt="サムネイル" className={`
+          mx-auto
+          w-56
+          max-w-full
+          mb-8
+        `} />
         <h2 className={`
             text-xl
             lg:text-2xl
