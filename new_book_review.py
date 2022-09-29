@@ -50,32 +50,27 @@ def main():
     q = input().strip()
     url = f"https://www.googleapis.com/books/v1/volumes?q={quote(q)}"
     data = requests.get(url).json()
-    totalItems = int(data["totalItems"])
     items: list[dict] = list(map(lambda x: x["volumeInfo"], data["items"]))
     book = Book()
-    for i in range(0, int(totalItems/10)+1):
-        print("\tタイトル\t著者")
-        for j in range(0, 10):
-            item = items[10*i+j]
-            if not "authors" in item:
-                item["authors"] = []
-            item["authors"] = ','.join(item['authors'])
-            if not "description" in item:
-                item["description"] = ""
-            print(f"({j})\t{item['title']}\t{item['authors']}")
-        print("選択してください: ", end="")
-        selected = input().strip()
-        if selected == "":
-            continue
-        item = items[10*i+int(selected)]
-        book.title = jaconv.z2h(
-            item["title"], kana=False, ascii=True, digit=True)
-        book.authors = item["authors"]
-        book.description = "  \n".join(
-            list(map(lambda x: f"> {x}", item["description"].split(" "))))
-        book.thumbnail = item["imageLinks"]["thumbnail"]
-        book.publishedDate = item["publishedDate"]
-        break
+    print("\tタイトル\t著者")
+    for i in range(0, 10):
+        item = items[i]
+        if not "authors" in item:
+            item["authors"] = []
+        item["authors"] = ','.join(item['authors'])
+        if not "description" in item:
+            item["description"] = ""
+        print(f"({i})\t{item['title']}\t{item['authors']}")
+    print("選択してください: ", end="")
+    selected = input().strip()
+    item = items[int(selected)]
+    book.title = jaconv.z2h(
+        item["title"], kana=False, ascii=True, digit=True)
+    book.authors = item["authors"]
+    book.description = "  \n".join(
+        list(map(lambda x: f"> {x}", item["description"].split(" "))))
+    book.thumbnail = item["imageLinks"]["thumbnail"]
+    book.publishedDate = item["publishedDate"]
     print("ジャンルを入力: ", end="")
     book.genre = input().strip()
     print("サブジャンルを入力: ", end="")
