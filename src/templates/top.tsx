@@ -1,6 +1,6 @@
 import React, { FC } from "react"
-import { graphql, HeadFC, Link, PageProps } from "gatsby"
-import { BookCardProps, Genre } from "../utils/types"
+import { graphql, HeadFC, PageProps } from "gatsby"
+import { BookCardProps } from "../utils/types"
 import Layout from "../components/Layout"
 import BookCards from "../components/BookCards/BookCards"
 import { createTitle } from "../utils/createTitle"

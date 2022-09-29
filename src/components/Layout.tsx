@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import { createTitle } from '../utils/createTitle'
 import Aside from './Aside/Aside'
 import MobileAside from './Aside/MobileAside'
 
@@ -7,7 +6,7 @@ type Props = {
   children: JSX.Element | JSX.Element[]
   title?: string
 }
-const Layout: FC<Props> = ({ children, title }) => {
+const Layout: FC<Props> = ({ children }) => {
   return (
     <div className="max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
       <div className="min-h-screen flex flex-col lg:flex-row items-center lg:items-stretch max-w-5xl mx-auto gap-6">
