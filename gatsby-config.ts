@@ -5,6 +5,7 @@ const config: GatsbyConfig = {
     title: `moritaki`,
   },
   graphqlTypegen: true,
+  pathPrefix: "moritaki",
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sass",
