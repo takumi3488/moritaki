@@ -5,7 +5,7 @@ title: "量子力学(I)(新装版)"
 thumbnail: "http://books.google.com/books/content?id=xbaIEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 publishedDate: "2022-06-01"
 stars: 5
-difficulty: 3
+difficulty: 2
 slug: "koide-ryoshi-1"
 updatedDate: "2022-09-03"
 ---
