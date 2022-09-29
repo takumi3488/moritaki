@@ -24,7 +24,7 @@ class Book():
             f.write(f'''---
 genre: "{self.genre}"
 subgenre: "{self.subgenre}"
-title: "{self.title}"
+title: "{self.title} / {self.authors}"
 thumbnail: "{self.thumbnail}"
 publishedDate: "{self.publishedDate}"
 stars: 5
@@ -70,7 +70,7 @@ def main():
     book.title = jaconv.z2h(
         item["title"], kana=False, ascii=True, digit=True)
     book.authors = item["authors"]
-    book.description = "  \n".join(
+    book.description = "\n".join(
         list(map(lambda x: f"> {x}", item["description"].split(" "))))
     book.thumbnail = item["imageLinks"]["thumbnail"]
     book.publishedDate = item["publishedDate"]

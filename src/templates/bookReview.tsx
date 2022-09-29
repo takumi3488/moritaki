@@ -1,5 +1,5 @@
 import { graphql, HeadFC, PageProps } from 'gatsby'
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import { TwitterShareButton } from 'react-share'
 import Layout from '../components/Layout'
 
