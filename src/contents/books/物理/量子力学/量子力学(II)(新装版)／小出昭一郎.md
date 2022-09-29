@@ -6,8 +6,8 @@ thumbnail: "http://books.google.com/books/content?id=wbaIEAAAQBAJ&printsec=front
 publishedDate: "2022-06-01"
 stars: 4
 difficulty: 3
-slug: ""
-updatedDate: ""
+slug: "koide-quantum-mechanics-2"
+updatedDate: "2022-09-04"
 ---
 
 ## 商品紹介(Google Books APIsより)

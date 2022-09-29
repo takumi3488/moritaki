@@ -6,7 +6,7 @@ thumbnail: "http://books.google.com/books/content?id=xbaIEAAAQBAJ&printsec=front
 publishedDate: "2022-06-01"
 stars: 5
 difficulty: 2
-slug: "koide-ryoshi-1"
+slug: "koide-quantum-mechanics-1"
 updatedDate: "2022-09-03"
 ---
 
