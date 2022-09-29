@@ -1,8 +1,13 @@
 import { graphql, HeadFC, PageProps } from 'gatsby'
 import React, { FC } from 'react'
+import { TwitterShareButton } from 'react-share'
 import Layout from '../components/Layout'
 
-
+declare global {
+  interface Window {
+    twttr: any
+  }
+}
 
 const BookReview: FC<PageProps<Queries.BookReviewPageQuery>> = ({ data }) => {
   const book = data.markdownRemark!
@@ -29,6 +34,13 @@ const BookReview: FC<PageProps<Queries.BookReviewPageQuery>> = ({ data }) => {
           `}
           style={{ textDecorationSkipInk: "none" }}>[書評]『{book.frontmatter!.title}』</h2>
         <section dangerouslySetInnerHTML={{ __html: book.html! }} className="markdown" />
+        <div className="text-center mt-8">
+          <TwitterShareButton title={`もりた記 | [書評]『${book.frontmatter!.title}』`} url={`https://moritaki.takumi3488.com/book_reviews/${book.frontmatter?.slug}`}>
+            <p className='twitter-share-button'>
+              ツイートする
+            </p>
+          </TwitterShareButton>
+        </div>
       </article>
     </Layout >
   )
