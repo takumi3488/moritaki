@@ -7,7 +7,7 @@ publishedDate: "2021-10-20"
 stars: 5
 difficulty: 4
 slug: "aws-container-honkaku"
-updatedDate: "2022-01-05"
+updatedDate: "2023-01-05"
 ---
 
 ## 商品紹介(Google Books APIsより)
