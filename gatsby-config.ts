@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `moritaki`,
+    title: "moritaki",
   },
   graphqlTypegen: true,
   plugins: [
@@ -13,11 +13,18 @@ const config: GatsbyConfig = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 630
             },
           },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "noopener"
+            }
+          }
         ]
       }
     },
