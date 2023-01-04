@@ -6,8 +6,8 @@ thumbnail: "http://books.google.com/books/content?id=NVBIEAAAQBAJ&printsec=front
 publishedDate: "2021-10-20"
 stars: 5
 difficulty: 4
-slug: ""
-updatedDate: ""
+slug: "aws-container-honkaku"
+updatedDate: "2022-01-05"
 ---
 
 ## 商品紹介(Google Books APIsより)
