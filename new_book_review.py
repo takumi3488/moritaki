@@ -3,6 +3,7 @@ import os
 from urllib.parse import quote
 import requests
 import jaconv
+from datetime import datetime
 
 
 class Book():
@@ -30,7 +31,7 @@ publishedDate: "{self.publishedDate}"
 stars: 5
 difficulty: 5
 slug: ""
-updatedDate: ""
+updatedDate: "{datetime.now().strftime("%Y-%m-%d")}"
 ---
 
 ## 商品紹介(Google Books APIsより)
