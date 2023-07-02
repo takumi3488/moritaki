@@ -33,7 +33,7 @@ const AsideList = () => {
         <hr className='bg-gray-700 w-full' />
         <h2 className='inline-block font-bold text-gray-600 text-sm md:text-base lg:text-lg mt-4'>ジャンル一覧</h2>
       </span>
-      <ul className='px-4 flex flex-col items-center text-blue-800 text-sm md:text-base'>
+      <ul className='px-4 flex flex-col w-60 mx-auto text-blue-800 text-sm md:text-base'>
         {genres.map(genre => <li key={genre.name} className="pb-4">
           <Link to={`/genres/${genre.name}`} className="hover:text-blue-600 hover:underline">{genre.name}({genre.count})</Link>
           <ul className='px-4'>{genre.subgenres.map(subgenre => <li key={subgenre.name}>
