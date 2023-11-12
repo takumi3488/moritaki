@@ -1,5 +1,5 @@
 ---
-genre: "開発"
+genre: "Web開発"
 subgenre: "Kubernetes"
 title: "Knative実践ガイド / 小野 佑大"
 thumbnail: "http://books.google.com/books/content?id=I7C3EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
