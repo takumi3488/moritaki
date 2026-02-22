@@ -35,7 +35,7 @@ jobs:
         with:
           static_site_generator: gatsby
       - name: Restore node_modules cache
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           path: |
             node_modules
@@ -43,7 +43,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-install-
       - name: Restore gatsby cache
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           path: |
             public
