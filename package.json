@@ -31,7 +31,7 @@
     "node-sass": "^7.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-share": "^4.4.0",
+    "react-share": "^5.0.0",
     "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
